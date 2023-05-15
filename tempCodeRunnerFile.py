@@ -3,7 +3,6 @@ from discord.ext import commands
 from module1 import historique_commandes
 from module2 import queue
 from module3 import Tree
-from module4 import hashmap
 import json
 import requests
 
@@ -27,7 +26,6 @@ try:
     with open("historique_commands.json", "r") as f:
         historique_commands = json.load(f)
 except FileNotFoundError:
-    historique_commands = hashmap(1000)
     historique_commands = historique_commandes()
 
 # Enregistrer l'historique des commandes dans le fichier JSON
